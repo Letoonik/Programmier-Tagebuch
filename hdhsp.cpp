@@ -12,9 +12,9 @@ int main(){
   
     string answer;
     std::ofstream outfile;
-    outfile.open("hdhsp.txt", std::ios_base::app); //öffnet "hdhsp.txt",falls nicht vorhanden, wird die Datei erstellt
+    outfile.open("hdhsp.txt", std::ios_base::app); //Öffnet "hdhsp.txt",falls nicht vorhanden, wird die Datei erstellt
     
-    std::time_t t = std::time(0); // Fragt jetzige Unix-Zeit ab
+    std::time_t t = std::time(0); //Fragt jetzige Unix-Zeit ab
     std::tm* now = std::localtime(&t); //Konvertiert Zeit
     
     cout << "Hast du heute schon programmiert?(y/n):";
@@ -28,7 +28,7 @@ int main(){
 
     else if (answer == "n") {
         cout << "Nicht so gut, mach weiter >:( \n";
-        outfile << now->tm_mday  << '.' << now->tm_mon + 1 << '.' << now->tm_year + 1900 << ": NICHT Programmiert\n\n"; //dat gleiche wie oben, nur das man eben nicht programmiert hat
+        outfile << now->tm_mday  << '.' << now->tm_mon + 1 << '.' << now->tm_year + 1900 << ": NICHT Programmiert\n\n"; //Dat gleiche wie oben, nur das man eben nicht programmiert hat
         system("pause");
     } 
 }
