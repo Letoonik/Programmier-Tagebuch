@@ -16,6 +16,7 @@ int menu(){
     cout << "----------------------------------\n";
     cout << "1. Neuer Eintrag verfassen\n";
     cout << "2. Letzer Eintrag loeschen\n";
+    cout << "3. Programm schliessen\n";
     cout << "----------------------------------\n";
     cout << "Auswahl: ";
     cin >> mode;

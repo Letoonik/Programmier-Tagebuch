@@ -35,12 +35,16 @@ if(answer == "y") {
         outfile << now->tm_mday  << '.' << now->tm_mon + 1 << '.' << now->tm_year + 1900 << ": Programmiert mit " << progLang <<".\n\n"; //Speichert Zeit und Programiertag + Programmiersprache ab 
         cout << "Gut gemacht ^_^\n";
         system("pause");
+        system("cls");
+        system("hdhsp.exe");
     }
 
     else if (answer == "n") {
         cout << "Nicht so gut, mach weiter >:( \n";
         outfile << now->tm_mday  << '.' << now->tm_mon + 1 << '.' << now->tm_year + 1900 << ": NICHT programmiert.\n\n"; //dat gleiche wie oben, nur das man eben nicht programmiert hat
         system("pause");
+        system("cls");
+        system("hdhsp.exe");
     } 
     }
 
@@ -53,6 +57,11 @@ if(answer == "y") {
         system("cls");
         cout << "Letzter Eintrag wurde geloescht!\n";
         system("pause");
+        system("cls");
+        system("hdhsp.exe");
         }
+    }
+    else if(valMenu == 3) {
+        return 0;
     }
 }
