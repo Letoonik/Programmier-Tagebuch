@@ -1,0 +1,6 @@
+#ifndef _res_rc
+#define _res_rc
+
+MAINICON ICON "favicon.ico"
+
+#endif // _res_rc
