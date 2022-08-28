@@ -14,6 +14,7 @@ int main(){
     string answer;
     string progLang;
     int valMenu;
+    string comment;
 
     std::ofstream outfile;
     outfile.open("hdhsp.txt", std::ios_base::app); //öffnet "hdhsp.txt",falls nicht vorhanden, wird die Datei erstellt
@@ -32,7 +33,10 @@ if (valMenu == 1) {
 if(answer == "y") {
         cout << "In welcher Programiersprache hast du programmiert?: ";
         cin >> progLang;
-        outfile << now->tm_mday  << '.' << now->tm_mon + 1 << '.' << now->tm_year + 1900 << ": Programmiert mit " << progLang <<".\n\n"; //Speichert Zeit und Programiertag + Programmiersprache ab 
+        cout << "Kommentar fur den heutigen Tag: ";
+        cin.ignore();
+        getline(cin >> ws, comment);
+        outfile << now->tm_mday  << '.' << now->tm_mon + 1 << '.' << now->tm_year + 1900 << ": Programmiert mit " << progLang << "." << " " << "//" << comment << "\n\n"; //Speichert Zeit und Programiertag + Programmiersprache + Kommentar ab 
         cout << "Gut gemacht ^_^\n";
         system("pause");
         system("cls");
