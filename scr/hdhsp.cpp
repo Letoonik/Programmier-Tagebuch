@@ -22,7 +22,6 @@ int main(){
     std::time_t t = std::time(0); // Fragt jetzige Unix-Zeit ab
     std::tm* now = std::localtime(&t); //Konvertiert Zeit
 
-
 valMenu = menu();
 system("cls");
 if (valMenu == 1) {
@@ -68,7 +67,8 @@ if(answer == "y") {
     else if(valMenu == 3) {
         displayDiary();
         system("pause");
-        menu();
+        system("cls");
+        system("hdhsp.exe");
     }
 
     
@@ -79,6 +79,7 @@ if(answer == "y") {
         system("cls");
         cout << "Falsche Eingabe!\n";
         system("pause");
-        menu();
+        system("cls");
+        system("hdhsp.exe");
     }
 }
