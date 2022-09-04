@@ -21,7 +21,7 @@ int main(){
     
     std::time_t t = std::time(0); // Fragt jetzige Unix-Zeit ab
     std::tm* now = std::localtime(&t); //Konvertiert Zeit
-
+do {
 valMenu = menu();
 system("cls");
 if (valMenu == 1) {
@@ -39,7 +39,6 @@ if(answer == "y") {
         cout << "Gut gemacht ^_^\n";
         system("pause");
         system("cls");
-        system("hdhsp.exe");
     }
 
     else if (answer == "n") {
@@ -47,7 +46,6 @@ if(answer == "y") {
         outfile << now->tm_mday  << '.' << now->tm_mon + 1 << '.' << now->tm_year + 1900 << ": NICHT programmiert.\n\n"; //dat gleiche wie oben, nur das man eben nicht programmiert hat
         system("pause");
         system("cls");
-        system("hdhsp.exe");
     } 
     }
 
@@ -61,25 +59,24 @@ if(answer == "y") {
         cout << "Letzter Eintrag wurde geloescht!\n";
         system("pause");
         system("cls");
-        system("hdhsp.exe");
         }
     }
     else if(valMenu == 3) {
         displayDiary();
         system("pause");
         system("cls");
-        system("hdhsp.exe");
     }
 
     
     else if(valMenu == 4) {
-        return 0;
+        break;
     }
     else {
         system("cls");
         cout << "Falsche Eingabe!\n";
         system("pause");
         system("cls");
-        system("hdhsp.exe");
     }
+}
+while(true);
 }
