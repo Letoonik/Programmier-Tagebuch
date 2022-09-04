@@ -23,9 +23,8 @@ int main(){
     std::tm* now = std::localtime(&t); //Konvertiert Zeit
 do {
 valMenu = menu();
-system("cls");
 if (valMenu == 1) {
-    
+    system("cls");
     cout << "Hast du heute schon programmiert?(y/n):";
     cin >> answer;
 
@@ -50,6 +49,7 @@ if(answer == "y") {
     }
 
     else if(valMenu == 2) {
+        system("cls");
         string sure;
         cout << "Bist du dir sicher, dass du den letzten Eintrag loeschen willst?(y/n):";
         cin >> sure;
@@ -62,6 +62,7 @@ if(answer == "y") {
         }
     }
     else if(valMenu == 3) {
+        system("cls");
         displayDiary();
         system("pause");
         system("cls");
@@ -74,7 +75,6 @@ if(answer == "y") {
     else {
         system("cls");
         cout << "Falsche Eingabe!\n";
-        system("pause");
         system("cls");
     }
 }
