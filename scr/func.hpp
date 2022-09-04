@@ -6,7 +6,6 @@
 #include <fstream>
 #include <ctime>
 #include <vector>
-#include <conio.h>
 
 using namespace std;
 
@@ -16,7 +15,8 @@ int menu(){
     cout << "----------------------------------\n";
     cout << "1. Neuer Eintrag verfassen\n";
     cout << "2. Letzer Eintrag loeschen\n";
-    cout << "3. Programm schliessen\n";
+    cout << "3. Tagebuch ansehen\n";
+    cout << "4. Programm schliessen\n";
     cout << "----------------------------------\n";
     cout << "Auswahl: ";
     cin >> mode;
@@ -43,4 +43,14 @@ if (outputStream.is_open())
     }
     outputStream.close();
 }
+}
+
+void displayDiary()
+{
+    std::ifstream f("hdhsp.txt");
+
+    if (f.is_open())
+        std::cout << f.rdbuf();
+    system("pause");
+    menu();
 }

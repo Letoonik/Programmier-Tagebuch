@@ -66,6 +66,19 @@ if(answer == "y") {
         }
     }
     else if(valMenu == 3) {
+        displayDiary();
+        system("pause");
+        menu();
+    }
+
+    
+    else if(valMenu == 4) {
         return 0;
+    }
+    else {
+        system("cls");
+        cout << "Falsche Eingabe!\n";
+        system("pause");
+        menu();
     }
 }
