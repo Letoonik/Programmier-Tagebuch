@@ -6,6 +6,7 @@
 #include <fstream>
 #include <ctime>
 #include <vector>
+#include <conio.h>
 
 using namespace std;
 
@@ -43,14 +44,14 @@ if (outputStream.is_open())
     }
     outputStream.close();
 }
-}
 
+}
 void displayDiary()
 {
-    std::ifstream f("hdhsp.txt");
+    std::ifstream outputStream("hdhsp.txt");
 
-    if (f.is_open())
-        std::cout << f.rdbuf();
+    if (outputStream.is_open())
+        std::cout << outputStream.rdbuf();
     system("pause");
     menu();
 }
