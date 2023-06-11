@@ -12,8 +12,8 @@ using namespace std;
 
 string answer;
 string progLang;
-int valMenu;
 string comment;
+int valMenu;
 
 std::time_t t = std::time(0); 
 std::tm* now = std::localtime(&t); 
