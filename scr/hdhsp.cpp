@@ -64,6 +64,7 @@ else if(valMenu == 2) {
     }
     else {
         system("hdhsp.exe");
+    }
 }
 else if(valMenu == 3) {
     displayDiary();
