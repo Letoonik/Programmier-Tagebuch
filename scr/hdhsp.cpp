@@ -36,7 +36,7 @@ if (valMenu == 1) {
         cout << "Kommentar fur den heutigen Tag: ";
         cin.ignore();
         getline(cin >> ws, comment);
-        outfile << now->tm_mday  << '.' << now->tm_mon + 1 << '.' << now->tm_year + 1900 << ": Programmiert mit " << progLang << "." << " " << "//" << comment << "\n\n";
+        outfile << now->tm_mday  << '.' << now->tm_mon + 1 << '.' << now->tm_year + 1900 << ": Programmiert mit " << progLang << ". //" << comment << "\n\n";
         cout << "Gut gemacht ^_^\n";
         system("pause");
         system("cls");
